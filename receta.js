@@ -1,19 +1,19 @@
 import Ingrediente from "./ingrediente.js";
 export default class Receta{
 
-    constructor(nombre, autor, ingredientes = new Ingrediente){
+    constructor(nombre, autor, ingrediente = new Ingrediente){
         this.nombre = nombre
         this.autor = autor
-        this.ingredentes = ingredientes
+        this.ingrediente =ingrediente
     }
 
     imprimirEnConsola(){
         return `${this.nombre} Autor: ${this.autor} y sus ingredienets son ${this.ingredientes}`
     }
 
-    getNumeroIngredientes(){
-        this.ingredientes.forEach(ingredientes => {
-            console.log(`${i + a}${ingredientes.getNumeroIngredientes()}`)
+    agregarIngredientes(){
+        this.ListarIngredientes.forEach(ingrediente => {
+            console.log(`${i + 1}${this.ingrediente.getDescripcion()}`)
         })
     }
 

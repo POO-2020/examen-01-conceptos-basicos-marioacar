@@ -4,13 +4,13 @@ import Receta from "./receta.js"
 class Main {
 
     constructor(){
-        this.Receta = new Receta ("rib-eye al sarten")
-        this.autor = this.autor
+        this.receta = new Receta ("rib-eye al sarten")
+        this.autor = "oscar"
         this.ingrediente1 = new Ingrediente ("pimineta negra recien molida")
         this.ingrediente2 = new Ingrediente ("sal de mar en grano")
 
-    }
 
+    }
 
     probarCantidad(){
         console.log("**Cantidad**")
@@ -26,13 +26,13 @@ class Main {
 
     probarReceta(){
         console.log("**Receta**")
-        let nombre  = "Oscar de la capital"
-        console.log()
+        this.receta.agregarIngredientes(this.ingrediente1)
+        this.receta.agregarIngredientes(this.ingrediente2)
+        this.receta.imprimirEnConsola()
     }
-
-    
 }
 
 let app = new Main()
 app.probarCantidad()
 app.probarIngrediente()
+app.probarReceta()
